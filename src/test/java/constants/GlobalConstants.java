@@ -10,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class GlobalConstants {
 
-    public String appURL = "http://localhost:8080/medicare/";
+    public String appURL = "http://localhost:8090/medicare/";
     public String count = "1";
     public String Productname = "Marshall";
     public String BrandName = "Bilazap";
