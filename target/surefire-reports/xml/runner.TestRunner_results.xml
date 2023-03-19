@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Smoke Test1"
+           tests="9"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="128.131">
+  <properties />
+  
+  
+            <testcase name="runScenario" time="9.506" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="1.461" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="5.284" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="16.947" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="9.289" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="8.867" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="1.351" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="62.135" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="13.291" classname="runner.TestRunner" />
+      
+</testsuite>

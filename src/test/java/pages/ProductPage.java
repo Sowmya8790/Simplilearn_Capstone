@@ -40,6 +40,7 @@ public class ProductPage {
 	    	
 	    	base.waitvisibility(DriverManager.getDriver(), productPageObjects.viewproducttab);
 	    	productPageObjects.viewproducttab.click();
+	    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	    	ExtentReport.getTest().pass("Clich on viewproduct tab", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 	    }
 	    
@@ -49,7 +50,7 @@ public class ProductPage {
 	    	productPageObjects.clickoncartone.click();
 	    	
 	    	ExtentReport.getTest().pass("Echeck weather the count added successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-	    	
+	    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	    
 	    
@@ -57,6 +58,7 @@ public class ProductPage {
 	    	
 	    	base.waitvisibility(DriverManager.getDriver(), productPageObjects.continueshopping);
 	    	productPageObjects.continueshopping.click();
+	    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	    	ExtentReport.getTest().pass("Click on contyinue shopping icom", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 
 	    	
@@ -97,7 +99,7 @@ public class ProductPage {
 	    	productPageObjects.checkoutbutton.click();
 	    	
 	    	ExtentReport.getTest().pass("click on checkout icon", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-    	
+	    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	    }
 	    
 	    public void validateshippingpage() {

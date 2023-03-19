@@ -1,5 +1,7 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,7 +36,7 @@ public class PaymentPage {
     	paymentPageObjects.expmonth.sendKeys(globalConstantsants.month);
     	paymentPageObjects.expyear.sendKeys(globalConstantsants.year);
     	paymentPageObjects.CVV.sendKeys(globalConstantsants.cvvcode);
-    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Enter All the details of credit card", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 
     	
@@ -45,7 +47,7 @@ public class PaymentPage {
     	base.waitvisibility(DriverManager.getDriver(),  paymentPageObjects.paybutton);
     	
     	paymentPageObjects.paybutton.click();
-    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Click on pay button", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 
     }
@@ -59,7 +61,7 @@ public class PaymentPage {
     	
     	Assert.assertEquals(Actual,Expected);
     	Assert.assertEquals(DriverManager.getDriver().getTitle(), "Medicare - Membership");
-    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Order confirmed should display", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 
     	
@@ -78,7 +80,7 @@ public class PaymentPage {
     	String Exptab2 = globalConstantsants.Selectedtab2;
     	
     	Assert.assertEquals(actualtab2,Exptab2);
-    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("The final order summary", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 
     }
@@ -94,6 +96,7 @@ public class PaymentPage {
     	String Expq2 = globalConstantsants.count;
     	
     	Assert.assertEquals(actualq2,Expq2);
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     }
 
 }

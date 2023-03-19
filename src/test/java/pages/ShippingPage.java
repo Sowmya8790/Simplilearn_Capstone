@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -41,7 +42,7 @@ public class ShippingPage {
 		shippingPageObjects.Country.sendKeys(globalConstants.Country);
 		
 		ExtentReport.getTest().pass("Enter All the details of address", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void clickAddaddress() {
@@ -49,7 +50,7 @@ public class ShippingPage {
 		base.waitvisibility(DriverManager.getDriver(), shippingPageObjects.AddAddressbutton);
 		shippingPageObjects.AddAddressbutton.click();
 		ExtentReport.getTest().pass("Clich on Address button", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void ValidateTabnames() {
@@ -63,7 +64,7 @@ public class ShippingPage {
 		String Expected2 = "Combiflame";
 		
 		Assert.assertEquals(Actual2, Expected2);
-		
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	

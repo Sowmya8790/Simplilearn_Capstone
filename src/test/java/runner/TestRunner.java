@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 
         features = "features",
         glue = "stepsDefinitions",
-       // tags = {"@user", "admin"},
+       
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
 

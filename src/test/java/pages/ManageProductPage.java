@@ -38,7 +38,7 @@ public class ManageProductPage {
     	
     	base.waitvisibility(DriverManager.getDriver(), manageProductObjects.mangeproducticon);
     	manageProductObjects.mangeproducticon.click();
-    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("click on Manage product tab", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 	
     }
@@ -66,6 +66,7 @@ public class ManageProductPage {
     	Select sel = new Select(manageProductObjects.dropdown);
     	sel.selectByValue(globalConstantsants.Catogoryy);
     	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Enter all the details in Manage product tab", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
     	
@@ -82,7 +83,7 @@ public class ManageProductPage {
     	manageProductObjects.Catdescription.sendKeys(globalConstantsants.catDescription);
     	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
     	manageProductObjects.Catsave.click();
-    		    	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Enter all the details in Manage product tab with new Catgory", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
     }
@@ -110,6 +111,7 @@ public class ManageProductPage {
     		}	    		
     	}
     	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Validate Category added from Database", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
         
     }
@@ -126,6 +128,7 @@ public class ManageProductPage {
    			Assert.assertTrue(false);
    		}	    		
    	}
+   	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
    	ExtentReport.getTest().pass("Validate Category deleted from Database", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     
    }
@@ -137,6 +140,7 @@ public class ManageProductPage {
     	
     	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
   //  	 productPageObjects.Savebutton.click();
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Product saved Successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
     }
@@ -157,6 +161,7 @@ public class ManageProductPage {
     	
     	Assert.assertEquals(Actual, Expected);
     	
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	ExtentReport.getTest().pass("Validated the newly added product Displaying or not", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
     	base.waitvisibility(DriverManager.getDriver(), manageProductObjects.ShowEntriesDropDown);

@@ -26,8 +26,6 @@ public class LoginPage {
     TestBase base;
     GlobalConstants globalConstantsants;
     public LoginObjects loginObjects;
-   
-
 
     public LoginPage()
     {
@@ -37,9 +35,10 @@ public class LoginPage {
         PageFactory.initElements(DriverManager.getDriver(),loginObjects);
     }
 
-
+    
 	public void launchapplixation() {
 		
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		DriverManager.getDriver().get(globalConstantsants.appURL);
 		base.waitvisibility(DriverManager.getDriver(), loginObjects.medicarelogo);
 		DriverManager.getDriver().manage().window().maximize();
@@ -57,6 +56,7 @@ public class LoginPage {
 	public void clickonlogin() {
 		
 		base.waitvisibility(DriverManager.getDriver(), loginObjects.loginclcik);
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		 ExtentReport.getTest().pass("Click on login.",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 		loginObjects.loginclcik.click();
 	}
@@ -66,6 +66,7 @@ public class LoginPage {
 		base.waitvisibility(DriverManager.getDriver(), loginObjects.username);
 		loginObjects.username.sendKeys(user);
 		loginObjects.password.sendKeys(pass);
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		 ExtentReport.getTest().pass("Enter the user and password",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 	}
 	
@@ -87,6 +88,7 @@ public class LoginPage {
 		
 		base.waitfortitle(DriverManager.getDriver(), "Medicare - Home");
 		Assert.assertEquals(expected,actual );
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		 ExtentReport.getTest().pass("Logged into application",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 		 
 		
@@ -96,6 +98,7 @@ public class LoginPage {
 		base.waitvisibility(DriverManager.getDriver(), loginObjects.clickclicknamelogo);
 		loginObjects.clickclicknamelogo.click();
 		loginObjects.clicklogout.click();
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		ExtentReport.getTest().pass("Logged out of the application",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 		
 	}

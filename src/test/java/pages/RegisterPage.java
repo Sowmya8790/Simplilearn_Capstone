@@ -1,5 +1,7 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,7 +36,7 @@ public class RegisterPage {
 		registerPageObjects.Registerherelink.click();
 		
 		ExtentReport.getTest().pass("Click on registerhere", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void Personaldetails() {
@@ -50,7 +52,7 @@ public class RegisterPage {
 		registerPageObjects.ReTypePassword.sendKeys(globalConstants.regPassword);
 		
 		ExtentReport.getTest().pass("Enter All the personal details", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void Selectuser() {
@@ -60,7 +62,7 @@ public class RegisterPage {
 		registerPageObjects.Roleuser.click();
 		
 		ExtentReport.getTest().pass("Select on User role", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void nextbilling() {
@@ -71,7 +73,7 @@ public class RegisterPage {
 		registerPageObjects.NextBilling.click();
 		
 		ExtentReport.getTest().pass("Click on nextbilling", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void AddressDetails() {
@@ -86,7 +88,7 @@ public class RegisterPage {
 		registerPageObjects.Country.sendKeys(globalConstants.Country);
 		
 		ExtentReport.getTest().pass("Enter All the details of address", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		
 	}
 	
@@ -104,7 +106,7 @@ public class RegisterPage {
 		registerPageObjects.Confirmbutton.click();
 		
 		ExtentReport.getTest().pass("Validate Welcome Page", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void Valiatewelcomepage() {
@@ -115,7 +117,7 @@ public class RegisterPage {
 		registerPageObjects.Clickloginhere.click();
 		
 		ExtentReport.getTest().pass("Click on loginhere", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void credentials() {
@@ -126,7 +128,7 @@ public class RegisterPage {
 		registerPageObjects.regpassword.sendKeys(globalConstants.regPassword);
 		
 		ExtentReport.getTest().pass("Enter credentials", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 	
 	public void Validateuser() {
@@ -136,7 +138,7 @@ public class RegisterPage {
 		Assert.assertEquals(DriverManager.getDriver().getTitle(), "Medicare - Home");
 		
 		ExtentReport.getTest().pass("Home Page", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 		
 

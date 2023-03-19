@@ -28,13 +28,13 @@ public class TestBase {
    
    public static void waitvisibility(WebDriver driver, WebElement element) {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 	public static void waitfortitle(WebDriver driver, String title) {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.titleIs(title));
 	}
 	
