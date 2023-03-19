@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 
 public class getSingleProduct {
 	
-	 String baseURI ="http://localhost:8080/medicare";    
+	 String baseURI ="http://localhost:8090/medicare";    
 	  
 	@Test
 public Response GetSingleEmp(){

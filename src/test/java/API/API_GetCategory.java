@@ -14,7 +14,7 @@ import io.restassured.response.Response;
 public class API_GetCategory {
 	
 
-    String baseURI ="http://localhost:8080/medicare";    
+    String baseURI ="http://localhost:8090/medicare";    
     JsonPath json;	   
     
     

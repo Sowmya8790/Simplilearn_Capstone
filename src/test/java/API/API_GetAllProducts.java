@@ -23,7 +23,7 @@ public class API_GetAllProducts {
 	
 
 	
-	    String baseURI ="http://localhost:8080/medicare";    
+	    String baseURI ="http://localhost:8090/medicare";    
 	    JsonPath json;	   
 	    
 	    @Test
