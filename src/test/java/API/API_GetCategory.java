@@ -84,17 +84,13 @@ public class API_GetCategory {
 	  		
 	  		GlobalConstants.apicatProduct.add(CatProduct.get(i).toString());
 	  	}
-	  	
-	  	System.out.println("API CatProducts :" + GlobalConstants.apicatProduct + "The size of Api cat products : "+ GlobalConstants.apicatProduct.size());
-	  	System.out.println("UI Products :" + GlobalConstants.UIproduct + "The size of Api cat products : " + GlobalConstants.UIproduct.size());
-	  }
+	  	  }
 		
 		
 		public void catValidateuiProducts()	{
 			
 			ExtentReport.getTest().pass("Validated UI Products and API catproducts in response");
 			
-			System.out.println(GlobalConstants.UIproduct + "The size of product in api :" + GlobalConstants.apicatProduct);
 			
 			for(int i=0;i<=GlobalConstants.apicatProduct.size()-1;i++) {
 				

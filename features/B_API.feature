@@ -10,7 +10,7 @@ Feature: Get Products API
 
 
 
-  Scenario: Delete a single category Products
+  Scenario: Retrieving single category Products
     Given the API endpoint is "http://localhost:8080/medicare"
     When a GET request is sent to fect Category Products
     Then the response status code of Category should be 200

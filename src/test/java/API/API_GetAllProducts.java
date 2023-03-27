@@ -26,7 +26,7 @@ public class API_GetAllProducts {
 	    String baseURI ="http://localhost:8090/medicare";    
 	    JsonPath json;	   
 	    
-	    @Test
+	   
 		public void LaunchURI(){
 	    	
 			RestAssured.baseURI = this.baseURI;
@@ -93,15 +93,14 @@ public class API_GetAllProducts {
 		  	}
 		  	
 		  	System.out.println("API Products :" + GlobalConstants.apiProduct);
-		  	System.out.println("UI Products :" + GlobalConstants.UIproduct);
+		  
 		  }
 			
 			
 			public void ValidateuiProducts() {
 				
 				ExtentReport.getTest().pass("Validated UI Products and API products in response");
-				
-				System.out.println(GlobalConstants.UIproduct + "The size of product in api :" + GlobalConstants.apiProduct);
+			
 				
 				for(int i=0;i<=GlobalConstants.apiProduct.size()-1;i++) {
 					

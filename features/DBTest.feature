@@ -24,3 +24,8 @@ Feature: Inserting data into the database
     And Enter the user "vs@gmail.com" and password "12345"
     And click on login button
     Then Validate Admin/User logged into the application
+
+  Scenario: Get list of Category
+    Given I have a database connection
+    When Get request to display list of Category
+    Then Close the driver

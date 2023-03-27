@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class LoginPage {
     TestBase base;
     GlobalConstants globalConstantsants;
     public LoginObjects loginObjects;
+    public static List<String> db_UIproduct = new ArrayList<String>();
 
     public LoginPage()
     {
@@ -102,6 +104,19 @@ public class LoginPage {
 		ExtentReport.getTest().pass("Logged out of the application",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
 		
 	}
+	
+	public void vailidatecat() {
+		
+		for(WebElement allcat:LoginObjects.allcategories) {
+			
+			String cat = allcat.getText().toString();
+			db_UIproduct.add(cat);
+		}
+		
+		ExtentReport.getTest().pass("Get all categories from the application",MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
+		
+		
+	}
 }
 
 class LoginObjects{
@@ -130,6 +145,10 @@ class LoginObjects{
 	
 	@FindBy(xpath ="//a[text()='Logout']")
 	WebElement clicklogout;
+	
+	@FindBy(xpath ="//a[@class='list-group-item']")
+	static
+	List<WebElement> allcategories;
 	
 	
 }

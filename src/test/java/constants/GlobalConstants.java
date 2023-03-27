@@ -68,6 +68,8 @@ public class GlobalConstants {
     public static String dbcatname = "Datapeb";
     public static String dbdescription = "This drug cures headache";
     public static String dbimage = "C:\\Users\\sowji\\eclipseworkspace1\\Project_Capstone\\Screenshot (10).png";
+    public static List<String> dbcatProduct = new ArrayList<String>();
+    
 }
 
 

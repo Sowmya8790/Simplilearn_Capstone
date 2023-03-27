@@ -111,9 +111,9 @@ public class ManageProductPage {
     		}	    		
     	}
     	
-    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+    	
     	ExtentReport.getTest().pass("Validate Category added from Database", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-        
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     }
    
    public void Validatecatgorynotindatabase() {
@@ -128,9 +128,9 @@ public class ManageProductPage {
    			Assert.assertTrue(false);
    		}	    		
    	}
-   	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+   
    	ExtentReport.getTest().pass("Validate Category deleted from Database", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-    
+	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
    }
     
     public void Save() {
@@ -140,9 +140,9 @@ public class ManageProductPage {
     	
     	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
   //  	 productPageObjects.Savebutton.click();
-    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-    	ExtentReport.getTest().pass("Product saved Successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
+    	ExtentReport.getTest().pass("Product saved Successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     }
     
     public void Validatedaddeditem() {
@@ -161,9 +161,9 @@ public class ManageProductPage {
     	
     	Assert.assertEquals(Actual, Expected);
     	
-    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-    	ExtentReport.getTest().pass("Validated the newly added product Displaying or not", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
     	
+    	ExtentReport.getTest().pass("Validated the newly added product Displaying or not", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     	base.waitvisibility(DriverManager.getDriver(), manageProductObjects.ShowEntriesDropDown);
  	   
     	

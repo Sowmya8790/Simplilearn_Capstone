@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import constants.GlobalConstants;
 import extentManager.ExtentReport;
 import groovy.transform.builder.InitializerStrategy.SET;
+import pages.LoginPage;
 
 public class Databaseconnect {
 	
@@ -22,7 +23,7 @@ public class Databaseconnect {
 	    private static Statement statement = null;
 	    private static PreparedStatement pstmt=null;
 	
-	   
+	  
 	public static void a_initdataconnection() throws SQLException, ClassNotFoundException {
 	    	Class.forName("com.mysql.jdbc.Driver");
 		
@@ -55,6 +56,42 @@ public class Databaseconnect {
 	    	
 	    }
 	    
+	   
+	    public void getCategories() throws SQLException {
+	    	
+	    	String getreq = "Select name FROM Category;";
+	    	
+	    	System.out.println(getreq);
+	    	ResultSet rs = statement.executeQuery(getreq); 
+	    	System.out.println("Test Started getcategories is : ");
+	    	
+	    	
+	    	while(rs.next()) {
+	    			    		
+	    		System.out.println("Get Category is : " +rs.getNString("name"));
+	    	;	    			    		
+	    	}
+	    	ExtentReport.getTest().pass("Launch Get request for category");
+	    	
+	    }
+	    
+	   
+	    public void ValidategetCategories() {
+	    	
+	    	for(int i=0;i<=GlobalConstants.dbcatProduct.size();i++) {
+	    	
+	    	if(GlobalConstants.dbcatProduct.get(i).equals(LoginPage.db_UIproduct.get(i))) {
+	    		Assert.assertTrue(true);
+	    	}
+	    	else {
+	    		
+	    		Assert.assertFalse(true);
+	    	}
+	    	}
+	    	
+	    	ExtentReport.getTest().pass("validate Get request for category in GUI and database");
+	    }
+	    
 	    
 	    public void getCategory() throws SQLException {
 	    	
@@ -75,6 +112,8 @@ public class Databaseconnect {
 	    	ExtentReport.getTest().pass("Launch Get request for category");
 	    	
 	    }
+	    
+	    
 	    
 	   
 	    public void deleteCategory() throws SQLException {
@@ -122,13 +161,7 @@ public class Databaseconnect {
 	    			+ "VALUES ('Sowmya', 'Varanasi', 'User', true, '$2a$10$2kvudlDcJC4qXOrVtMtU9.jvhCkOxwHbIZluYshykct9Ydv79h8Ni', 'vs@gmail.com', '9696969696');";
 	    	
 	    	pstmt = connection.prepareStatement(query);
-	   /* 	pstmt.setString(1, "Sowmya");
-	    	pstmt.setString(2, "Varanasi");
-	    	pstmt.setString(3, "User");
-	    	pstmt.setString(4, "true");
-	    	pstmt.setString(5, "1234");
-	    	pstmt.setString(6, "vs@gmail.com");
-	    	pstmt.setInt(7, '9090909090');*/
+	  
 	    	
 	    	pstmt.executeUpdate();
 	    	
@@ -150,7 +183,10 @@ public class Databaseconnect {
 	    	
 	    	ExtentReport.getTest().pass("Launch Get request to validate User added in database");
 	    }
+
 	    
+	    
+	 
 	    public void e_freeConnection() {
 	        if (connection == null) {
 	            return;
