@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="132.150">
+           time="129.982">
   <properties />
   
   
-            <testcase name="runScenario" time="1.455" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="9.461" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="9.403" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="62.100" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="5.135" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="1.038" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="8.842" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="16.470" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="1.215" classname="runner.TestRunner" />
-                <testcase name="runScenario" time="17.031" classname="runner.TestRunner" />
+            <testcase name="runScenario" time="13.195" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="1.341" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="1.113" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="61.969" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="9.476" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="8.871" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="5.470" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="10.535" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="1.112" classname="runner.TestRunner" />
+                <testcase name="runScenario" time="16.900" classname="runner.TestRunner" />
       
 </testsuite>

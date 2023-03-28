@@ -5,10 +5,8 @@
     <classes>
       <class name="JDBCConnection.Databaseconnect">
         <methods>
-          <include name="a_initdataconnection"/>
           <include name="e_freeConnection"/>
-          <include name="getCategories"/>
-          <include name="ValidategetCategories"/>
+          <include name="getCategory"/>
         </methods>
       </class> <!-- JDBCConnection.Databaseconnect -->
     </classes>

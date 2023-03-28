@@ -106,14 +106,14 @@ public class ManageProductPage {
     	
     	for(WebElement drop:catdrop) {
     		
-    		if((drop.equals(globalConstantsants.dbcatname))) {
+    		if((drop.getText().equals(globalConstantsants.dbcatname))) {
     			Assert.assertTrue(true);
     		}	    		
     	}
     	
     	
     	ExtentReport.getTest().pass("Validate Category added from Database", MediaEntityBuilder.createScreenCaptureFromBase64String(base.getBase64()).build());
-    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+    	DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
     }
    
    public void Validatecatgorynotindatabase() {

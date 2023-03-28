@@ -7,6 +7,7 @@ pages\ProductPage.class
 pages\LoginPage.class
 pages\PageManager.class
 stepsDefinitions\API_viewCatProductSteps.class
+stepsDefinitions\D_GetCategory.class
 pages\RegisterPage.class
 stepsDefinitions\ShippingSteps.class
 JDBCConnection\Databaseconnect.class
